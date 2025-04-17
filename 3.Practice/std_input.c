@@ -164,7 +164,11 @@ int method4(){
 /****************************************************** */
 int method5(){
     char input[200];
+<<<<<<< HEAD
     int age;
+=======
+    int age; 
+>>>>>>> c8671f9e557bf5f2df8ed157dd435248cbf30ba8
     float height;
     char name[50];
     char gender;
