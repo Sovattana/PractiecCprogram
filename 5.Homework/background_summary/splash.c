@@ -10,7 +10,8 @@ int main(void){
     scanf("%s",name);
     int isNameCorrect = 1;
     char character[]="Arthur Dent";
-    for (int i ;character[i] != '\0' && name[i] != '\0' ; i++){
+    //Check if  
+    for (int i = 0 ;character[i] != '\0' && name[i] != '\0' ; i++){
         if (name[i] != character[i]){
             isNameCorrect = 0;
             break;
@@ -26,10 +27,36 @@ int main(void){
         system("cls") ;
         //Print the backgoround Summary
         printf("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-        printf("\t\t\t\t\t  [Magrathea ver 0.1]\n");
-        printf("\t\tMagrathea, where a shining planet is created in a wasteland with no grass,\n");
-        printf("\ta place where unseen potential is discovered and gems are polished by the hands of experts,\n");
-        printf("\t\t\t\t\t  Welcome to Magrathea.\n");
+    char* message[]={
+        "\t\t\t\t\t  [Magrathea ver 0.1] \t\t\t\t\t\t",
+        "\t\t  Magrathea, where a shining planet is created in a wasteland with no grass, \t\t",
+        "\t  a place where unseen potential is discovered and gems are polished by the hands of experts, \t",
+        "\t\t\t\t\t  Welcome to Magrathea.     \t\t\t\t\t",
+        "",
+    };
+    for (int row=1 ;row<=5;row++){
+        //Left Star section
+        for(int j =1;j<=row;j++){
+            printf("*");
+        }
+        if(row==1){
+            printf("\t\t\t\t\t\t\t\t\t\t\t\t\t");
+        } else if(row!=1){
+            //Start print text after 1st row
+            printf("%s",message[row-2]);
+        }
+        //Right star section
+        for(int space=1 ; space<row; space++){
+            printf(" ");
+            
+        }
+        for(int star=row ; star<=5; star++){
+            printf("*");
+        }
+        
+    printf("\n");
+    };
+        // printf("\t\t\t\t\t  [Magrathea ver 0.1]\n");
         printf("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
         printf("[User]: %s\t\t\t\t\t\t [Execite Time]: %d-%d-%d\n",name,year,month,day);
         printf("=============================================================================================================");
