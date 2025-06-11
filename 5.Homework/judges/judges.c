@@ -83,6 +83,7 @@ int main(void){
             
             printf("-----------------------------------\n");
         };
+        printf("...............[Omitted for brevity]............");
         return 0;
     }else {
         return 0;
